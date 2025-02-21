@@ -53,7 +53,7 @@ def main(
         guarded = ai_guard.guard_text(x.message.content, recipe="pangea_llm_response_guard")
         assert guarded.result
 
-        click.echo(guarded.result.redacted_prompt or x.message.content)
+        click.echo(guarded.result.prompt_text or x.message.content)
 
 
 if __name__ == "__main__":
